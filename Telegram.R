@@ -128,7 +128,7 @@ df <- getNotionDatabase(secret = Notion_secret, database = Notion_database)
 # Sample 3 quotes ---------------------------------------------------------
 
 data_s1 <- df[sample(1:nrow(df), 3), ]  # Sample rows of data with Base R
-data_s1$properties.Quote.title.plain_text
+quotes <- data_s1$properties.Quote.title.plain_text
 
 d <- as.data.frame(quotes)
 
