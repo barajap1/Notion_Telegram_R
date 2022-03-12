@@ -1,7 +1,7 @@
 name: notion_telegram
 on:
   schedule:
-    - cron: '52 05 * * *'
+    - cron: '30 14 * * *'
 jobs:
   notion_telegram-post:
     runs-on: macOS-latest
