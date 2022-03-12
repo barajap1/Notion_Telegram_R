@@ -2,17 +2,16 @@ name: notion_telegram
 on:
   schedule:
     - cron: '31 03 * * *'
-  #push:
-  #  branches:
-  #    - main
 jobs:
   notion_telegram-post:
     runs-on: macOS-latest
+    
     env:
           R_TELEGRAM_BOT_RBot: ${{ secrets.R_TELEGRAM_BOT_RBot }}
           R_TELEGRAM_USER_me: ${{ secrets.R_TELEGRAM_USER_me }}
           NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
           NOTION_DATABASE: ${{ secrets.NOTION_DATABASE }}
+    
     steps:
       - uses: actions/checkout@main
       - uses: r-lib/actions/setup-r@v2
