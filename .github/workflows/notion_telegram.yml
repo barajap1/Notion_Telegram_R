@@ -24,7 +24,9 @@ jobs:
       - name: Install tidyr package
         run: Rscript -e 'install.packages("tidyr", dependencies = TRUE)'
       - name: Install tibble package
-        run: Rscript -e 'install.packages("tibble", dependencies = TRUE)'  
+        run: Rscript -e 'install.packages("tibble", dependencies = TRUE)'
+      - name: Install glue package
+        run: Rscript -e 'install.packages("glue", dependencies = TRUE)' 
       - name: Pull from NOtion and send message
         run: Rscript Telegram.R
         
