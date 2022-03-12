@@ -1,7 +1,7 @@
 name: notion_telegram
 on:
   schedule:
-    - cron: '25 19 * * *'
+    - cron: '31 03 * * *'
   #push:
   #  branches:
   #    - main
