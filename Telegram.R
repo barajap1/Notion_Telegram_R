@@ -126,17 +126,19 @@ df <- getNotionDatabase(secret = Notion_secret, database = Notion_database)
 
 
 
-# Sample 3 quotes ---------------------------------------------------------
+# Sample 1 quotes ---------------------------------------------------------
 
-data_s1 <- df[sample(1:nrow(df), 2), ]  # Sample rows of data with Base R
+data_s1 <- df[sample(1:nrow(df), 1), ]  # Sample rows of data with Base R
 quotes <- data_s1$properties.Quote.title.plain_text
 
 d <- as.data.frame(quotes)
 
 Quote1 <- d$quotes[1]
-Quote2 <- d$quotes[2]
+# Quote2 <- d$quotes[2]
 
-Telegram_message <- glue({Quote1},{Quote2}, .sep = ". \n \n")
+# Telegram_message <- glue({Quote1},{Quote2}, .sep = ". \n \n")
+
+Telegram_message <- Quote1
 
 # Telegram Message --------------------------------------------------------
 
